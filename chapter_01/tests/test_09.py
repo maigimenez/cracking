@@ -1,6 +1,6 @@
 import unittest
 
-from chapter01.src.question09 import string_rotation
+from chapter_01.src.question_09 import string_rotation
 
 
 class TestStringRotation(unittest.TestCase):

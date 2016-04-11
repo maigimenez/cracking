@@ -1,6 +1,6 @@
 import unittest
 
-from chapter01.src.question07 import rotate_matrix
+from chapter_01.src.question_07 import rotate_matrix
 
 
 class TestRotateMatrix(unittest.TestCase):
