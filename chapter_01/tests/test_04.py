@@ -3,7 +3,7 @@ import string
 from random import randint, choice
 from itertools import permutations
 
-from src.answer_04 import is_palindrome_permutation
+from chapter_01.src.answer_04 import is_palindrome_permutation
 
 
 def create_permutations(chars):
