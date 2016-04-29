@@ -1,6 +1,6 @@
 import unittest
 
-from chapter_01.src.question_01 import unique_chars
+from chapter_01.src.answer_01 import unique_chars
 
 
 class TestUnique(unittest.TestCase):

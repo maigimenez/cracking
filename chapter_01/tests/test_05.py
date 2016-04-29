@@ -1,6 +1,6 @@
 import unittest
 
-from chapter_01.src.question_05 import one_away
+from chapter_01.src.answer_05 import one_away
 
 
 class TestOneAway(unittest.TestCase):
