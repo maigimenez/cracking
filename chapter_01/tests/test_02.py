@@ -24,9 +24,14 @@ class TestPermutation(unittest.TestCase):
         fst_string, snd_string = next(permutation_func), next(permutation_func)
         self.assertIs(is_permutation(fst_string, snd_string), True)
 
+    def test_is_not_permutation(self):
+        fst_string, snd_string = 'abcd', 'efg'
+        self.assertIs(is_permutation(fst_string, snd_string), False)
+
     def test_is_empty(self):
         self.assertIs(is_permutation("non empty string", ""), False)
         self.assertIs(is_permutation("", "non empty string"), False)
+        self.assertIs(is_permutation("", ""), False)
 
     def test_is_none(self):
         self.assertIs(is_permutation("non empty string", None), False)
