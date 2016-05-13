@@ -28,10 +28,10 @@ class TestZeroMatrix(unittest.TestCase):
 
 
     def test_is_empty(self):
-        self.assertIs(zero_matix(), None)
+        self.assertIs(zero_matix([]), False)
 
     def test_is_none(self):
-        self.assertIs(zero_matix(None), None)
+        self.assertIs(zero_matix(None), False)
 
 
 if __name__ == '__main__':

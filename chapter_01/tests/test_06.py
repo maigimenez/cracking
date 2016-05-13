@@ -15,10 +15,10 @@ class TestComprenssion(unittest.TestCase):
         self.assertIs(compress(expanded_string), compressed_string)
 
     def test_is_empty(self):
-        self.assertIs(compress(""), None)
+        self.assertIs(compress(""), False)
 
     def test_is_none(self):
-        self.assertIs(compress(None), None)
+        self.assertIs(compress(None), False)
 
 
 if __name__ == '__main__':
