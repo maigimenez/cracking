@@ -14,6 +14,9 @@ class TestComprenssion(unittest.TestCase):
         compressed_string = [letter*rep for letter, rep in seed_string]
         self.assertIs(compress(expanded_string), compressed_string)
 
+    def test_is_same_len(self):
+        self.assertIs(compress("abcde"), "abcde")
+
     def test_is_empty(self):
         self.assertIs(compress(""), False)
 
