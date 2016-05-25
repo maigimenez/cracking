@@ -10,18 +10,18 @@ class TestComprenssion(unittest.TestCase):
         characters = string.ascii_lowercase
         long_string = randint(3, 10)
         seed_string = [(choice(characters), randint(3, 10)) for _ in range(long_string)]
-        expanded_string = [letter+str(rep) for letter, rep in seed_string]
-        compressed_string = [letter*rep for letter, rep in seed_string]
+        compressed_string = ''.join([letter+str(rep) for letter, rep in seed_string])
+        expanded_string = ''.join([letter*rep for letter, rep in seed_string])
         self.assertIs(compress(expanded_string), compressed_string)
 
     def test_is_same_len(self):
         self.assertIs(compress("abcde"), "abcde")
 
     def test_is_empty(self):
-        self.assertIs(compress(""), False)
+        self.assertIs(compress(""), "")
 
     def test_is_none(self):
-        self.assertIs(compress(None), False)
+        self.assertIs(compress(None), None)
 
 
 if __name__ == '__main__':
