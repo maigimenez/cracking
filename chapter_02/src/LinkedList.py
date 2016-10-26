@@ -9,9 +9,12 @@ class Node:
 
 class LinkedList(object):
 
-    def __init__(self):
+    def __init__(self, list_ints=None):
         # TODO Make this protected (@property)
         self._head = None
+        if list_ints:
+            for int_data in list_ints:
+                self.append_to_tail(int_data)
 
     def append_to_tail(self, int_data):
         """ Add a new node at the end of the Linked List """
@@ -45,3 +48,23 @@ class LinkedList(object):
             current_node = current_node._next
         str_rep += "{}".format(current_node._data)
         return str_rep+"}"
+
+    def __eq__(self, other):
+        fst_node = self._head
+        snd_node = other._head
+
+        # Comparing an empty list
+        if self._head is None and other._head is None:
+            return True
+
+        # Comparing non empty lists
+        while fst_node._next is not None:
+            if fst_node._data != snd_node._data:
+                return False
+            fst_node = fst_node._next
+            snd_node = snd_node._next
+        if fst_node._data != snd_node._data:
+            return False
+        if snd_node._next is not None:
+            return False
+        return True
