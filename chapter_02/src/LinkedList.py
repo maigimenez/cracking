@@ -18,9 +18,17 @@ class LinkedList():
             self.last.next = e
             self.last = self.last.next
 
+    def to_list(self):
+        l = []
+        node = self.first
+        while node is not None:
+            l.append(node.data)
+            node = node.next
+        return l
 
-def create_linked_list(self, pylist):
+
+def create_linked_list(mylist):
     l = LinkedList()
-    for elem in pylist:
+    for elem in mylist:
         l.append(elem)
     return l
