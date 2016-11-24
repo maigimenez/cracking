@@ -14,7 +14,6 @@ class TestPartition(unittest.TestCase):
         k = randrange(-2,12)
         pl = get_partition(ll, k)
         right = False
-        print(pl.to_list(), k)
         for e in pl.to_list():
             if e >= k:
                 right = True
